@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_filex/providers/providers.dart';
 import 'package:flutter_filex/screens/apps_screen.dart';
 import 'package:flutter_filex/screens/audio.dart';
@@ -10,7 +9,6 @@ import 'package:flutter_filex/screens/downloads.dart';
 import 'package:flutter_filex/screens/file.dart';
 import 'package:flutter_filex/screens/images.dart';
 import 'package:flutter_filex/screens/search.dart';
-import 'package:flutter_filex/utils/dimension_const.dart';
 import 'package:flutter_filex/utils/utils.dart';
 import 'package:flutter_filex/widgets/widgets.dart';
 import 'package:flutter/material.dart';
@@ -35,14 +33,14 @@ class _BrowseState extends State<Browse> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    SchedulerBinding.instance.addPostFrameCallback((_) {
-      Provider.of<CategoryProvider>(context, listen: false).getDownloads();
-    });
+    // SchedulerBinding.instance.addPostFrameCallback((_) {
+    //   Provider.of<CategoryProvider>(context, listen: false).getDownloads();
+    // });
   }
 
   @override
   Widget build(BuildContext context) {
-    Provider.of<CoreProvider>(context, listen: false).getRecentFiles();
+    // Provider.of<CoreProvider>(context, listen: false).getRecentFiles();
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
